@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+ <script>
+//if(true)
+      //  {
+          //var a=6;//outside of block we can acess
+          //let b=7;//let variable scope is inside block
+        //}
+
+        //console.log("a="+a);
+       // console.log("b="+b);//It shows error
+
+//const x=5;
+      //  x=10;//It shows error because constant value cannot change
+        //console.log(x);-->
+
+
+
+
+
+//let d1=5,d2=7;
+
+   //  console.log(`d1= ${d1} and d2= ${d2}`);
+     //console.log(typeof d1);
+     //console.log(typeof d2);
+
+
+
+     //String datatype
+     let name1="Ajay";
+        let name2='Vijay';
+        let msg=`my name is kiran`;
+
+        console.log(`My name is ${name}`,typeof name);
+        console.log("My name is "+name1+" "+typeof name1);
+        console.log(msg,typeof msg);
+
+
+        //boolean(true,false)
+    
+    let pass=false;
+    
+    console.log("I passed in the exam"+pass);
+    console.log(typeof pass);
+
+
+    //datatype:It tells the type of data.there are two type of data:
+     //1)primitive datatype: which hold single value,and in js ,there 5 datatypes(number,string,boolean,null,undefined)
+     //2)Non primitive datatype:alway hold many value: array,object
+     
+    //null datatype
+    let sname=null;
+    console.log(typeof sname);
+
+  //undefined datatype
+  console.log(c);
+  var c=7;
+   
+  //json object:it defined using curly braces and inside it ,there are properties in key-value 
+
+ let student={
+    sname:'Vijay',
+    age:22,
+    pass:true,
+    marks:44.5
+  }
+console.log(student);
+  console.log(student.sname);//Dot notation
+  console.log(student.age);
+
+  console.log(student['marks']);//bracket notation[]
+
+  //array:It is a collection of similar datatypes
+  let marks=[88,23,99,66];
+  let cities=["Pune","Mumbai"];
+  let b=[true,false,true]
+
+  //
+  d=new Date();
+  console.log(d);
+
+  //datatype conversion:converting one datatype to another
+
+  let n='5';
+  console.log(typeof n);
+  console.log(n+5);//concatation ''+implicit conversion
+  let e=Number(n);//Explicit
+  console.log(typeof e);
+
+
+
+    </script>
+    <body>
+</body>
+</html>

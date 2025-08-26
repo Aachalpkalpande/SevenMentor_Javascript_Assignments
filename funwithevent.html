@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>event</title>
+    <script>
+        function findFact(num){
+            let f=1;
+            while(num!=0)
+        {
+            f=f*num;//1*5 f=5, f=5*4=20, f=20*3=60, f=60*2=120, f=120*1=120
+            num--;// 4,3,2,1,0
+        }
+        console.log(f);//120
+        }
+        let f=()=>{
+            console.log("hello js class");
+        }
+
+
+        function addition(n1, n2){
+            console.log(n1+n2);
+
+        }
+        addition(3,2);
+
+  
+
+
+
+
+
+        findFact(5);
+    </script>
+</head>
+<body>
+    <button onclick="findFact(5)">
+        Click
+    </button>
+    <button onclick="f()"> MyFunction</button>
+    <button onclick="addition(3,2)">number</button>
+</body>
+</html>

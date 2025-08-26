@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom revision 
+
+    </title>
+</head>
+<body>
+    
+    <label for="num1">enter number</label>
+    <input type="text" id="num1">
+
+    <button onclick="myFun()">click</button>
+
+    <p id="myPara">my Paragraph </p>
+    <script>
+        function myFun(){
+        let n1=parseInt(document.getElementById("num1").value);
+        n1=n1+10;
+
+        let newPara=document.getElementById("myPara");
+        newPara.innerText=n1;
+        newPara.style.backgroundColor="cyan";
+        
+        }
+
+
+    </script>
+
+</body>
+</html>

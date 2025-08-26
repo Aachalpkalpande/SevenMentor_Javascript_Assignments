@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+/*
+//function declare
+        function myFun(){
+            console.log("Learning js");
+        }
+
+
+        //function call
+
+        myFun();
+//Cube of a number 3->27
+//Passing parameter to a function
+        function findCube(num)
+        {
+            let result=num*num*num;
+            console.log(result);
+        }
+
+        //named funtion
+        let f= function myFun1(){
+            console.log("Learning bootstrap");
+        }
+      f();
+
+        //unnamed funtion
+        let s=  function(){
+        console.log("In future we will learn React");
+      }
+
+     s();
+
+      // parametrize arrow fun
+     let q=  (x,y)=>{
+    let result=    (x*x*x*x)+(y*y*y*y);
+    console.log(result);
+     }
+
+     q(2,2);
+   
+
+     //set timeout: 
+     /*an anoymous function is simply a function with no
+     often used in function expressions, event handlers, and callbacks.*/
+    
+    setTimeout(() => {
+        console.log("learning settimeout function")
+        
+    }, 3000);
+
+//Callback Function
+/*A callback function is passed into another 
+function as an argument and is executed after some
+ kind of event or operation.*/
+
+/*
+ function find(callback)// callback=()=>{}
+ {
+    setTimeout(() => {
+        console.log("lerning callback function");
+        callback()
+    }, 3000);
+ }
+    find(()=>{
+        console.log("this is my cb function");
+    });
+*/
+
+
+
+function mySum(callback)
+{
+    setTimeout(() => {
+        console.log("i am using a callback function");
+        callback(3,4);
+        
+    }, 4000);
+}
+
+mySum((n,m)=>{
+    console.log(n+m);
+})
+
+ 
+
+
+
+
+
+
+        
+    </script>
+</body>
+</html>

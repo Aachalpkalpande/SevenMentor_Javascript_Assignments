@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo setinterval</title>
+</head>
+<body>
+    
+    <div id="myId"></div>
+
+    <!--
+     <button id="myButton" onclick="stopShow()">Stop setInterval</button>
+-->
+        <script>
+         
+        /*
+            function show(){
+            document.getElementById("myId").innerHTML+="<b>This is my div</b> <br>"
+            }
+
+           const s= setInterval(show,2000);
+
+
+           function stopShow(){
+                clearInterval(s)
+           }
+                */
+        </script>
+
+<div id="message"></div>
+
+  <script>
+    /*
+    let count = 0;
+
+    setInterval(function() {
+      if (count < 5) {
+        document.getElementById('message').innerText += 'Hello\n';
+        count++;
+      }
+    }, 1000); // Prints "Hello" every 1 second
+    */
+  </script>
+
+
+<div id="firstDiv"></div>
+  <script>
+     
+   /*   setInterval(()=>{
+        document.getElementById('firstDiv').innerText += 'Bye\n';
+      },1000)*/
+  </script>
+
+<p id="myPara"></p>
+
+
+<script>
+    setTimeout(()=>{
+        document.getElementById('myPara').innerText = 'Using settimeout';
+    },3000)
+</script>
+
+<script>
+   /*
+   setTimeout(()=>{
+        alert("Call after 2 seconds")
+    },2000)*/
+</script>
+
+</body>
+</html>

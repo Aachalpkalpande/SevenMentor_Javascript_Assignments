@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inner html </title>
+</head>
+<body>
+    <div class="myDiv">
+        ths is my original div class using getelementbyclass
+    </div>
+    
+    <p class="myPara">
+        my paragaraph
+    </p>
+    <script>
+        const element=document.getElementsByClassName("myDiv"); //element=[]
+
+        //element[0].innerHTML=<b>this is new text </b>;
+
+        const e=document.getElementsByClassName("myPara");
+        e[0].style.backgroundColor="yello";
+        
+        const newpara=document.getElementsByClassName("myPara");
+
+
+
+    </script>
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asynchonous Deml</title>
+</head>
+
+<body>
+    <script>
+        
+        function fetchData(callback){
+            setTimeout(()=>{
+                const data='recived data';
+            },2000)
+        }
+        function handleData(data){
+            console.log(data);
+
+        }
+        fetchData(handleData);
+
+
+
+
+    
+
+    </script>
+    <script>
+        /*
+        function addData(callback){
+            setTimeout(()=>{
+                const d1=4, d2=5;
+                callback(d1,d2);
+
+            },2000)
+        }
+        addData((d1,d2)=>{
+            let s=d1+d2;
+            console.log("addition"+s)
+        })*/
+    </script>
+    <script>
+        //promises and chaining
+        //a promise is an object representing the eventual complition or failuire of an asynchonous operation.
+
+        /*const fetchData= new Promise((resolve, reject)=>{
+
+            setTimeout(()=>{
+
+                const data='recived data from promises';
+
+                resolve(data);
+            }, 2000)
+        })
+        fetchData.then((data)=>{
+            console.log(data);
+
+        }
+    
+    ).catch((error)=>console.log('error in fetching data'));
+*/
+    </script>
+    <script>
+/*
+        const fetchData= new Promise((resolve, reject)=>{
+
+        setTimeout(()=>{
+
+    const data='recived data from BACKEND';
+
+    resolve(data);
+}, 2000)
+
+})
+
+fetchData.then((data)=>{
+console.log(data);
+return 'more data';
+
+}
+).then(()=>{
+    
+}).catch((error)=>console.log('error message'+error));
+
+*/
+
+
+    </script>
+    <script>
+        /*
+         const fetchData= new Promise((resolve, reject)=>{
+
+setTimeout(()=>{
+
+reject('error in fetching');
+
+}, 2000)
+         })
+
+*/
+    </script>
+    <script>
+        /*
+        function checkNumber(number){
+            return new promises(resolve, reject=>{
+                if(number>10)
+            })
+        }*/
+    </script>
+
+    <script>/*
+        const fetchData = new Promises((resolve, reject)=>{
+            setTimeout(()=>{
+
+            }
+        )
+        })*/
+
+
+        function fetchData(){
+            return new Promises((res,rej)=>{
+                setTimeout(()=>{
+                    res("data fetched successfully");
+                },2000);
+            });
+        }
+
+        //async function using await to handle the promises
+        async function getData(){
+            console.log('fetch data......');
+            const data=await fetchData();//wait
+            console.log(data);
+        }
+        getData();
+    </script>
+    <script>
+        
+    </script>
+</body>
+</html>

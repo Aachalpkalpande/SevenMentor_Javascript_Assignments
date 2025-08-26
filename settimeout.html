@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="myPara"> hii aachal</p>
+    <script>
+       /* setTimeout(()=>{
+            document.getElementById("myPara").innerText = 'using settimeout';
+
+        }, 3000)*/
+    </script>
+
+    <script>
+        /*
+        setTimeout(()=>{
+            alert("call after 2 sec")
+        }, 2000)
+        */
+       function fetchData(callback)
+       {
+        setTimeout(()=>{
+            const data='recived data'
+        },2000)
+       }
+       function handleData(data){
+        console.log(data);
+       }
+
+       fetchData (handleData);
+
+
+
+
+
+
+    </script>
+    
+</body>
+</html>

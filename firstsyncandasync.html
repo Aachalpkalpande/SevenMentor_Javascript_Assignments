@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SYNC AND ASYNC </title>
+</head>
+<body>
+    <script>
+     /*   
+        //syncronus code: execute line by line.
+        function myFun(){
+            console.log("time taken");
+
+        }
+        console.log("start");
+        myFun();
+        console.log("find anather data");
+        console.log("End");
+        //setTimeout
+
+        setTimeout(()=>{
+                console.log("use settimeout")
+        },3000)
+        
+        
+ 
+        console.log("async code");
+        console.log("Start");
+
+        setTimeout(myFun,5000);
+        console.log("Find Anather Data");
+        console.log("End");
+
+
+//Callback function: the function is ued to passed anther agrument.
+        
+const demoFun=(callback)=>{
+
+            const data='aachal';
+            console.log("data");
+            callback();
+
+        }
+
+        demoFun(()=>{
+            console.log("this is callback function it is called inside the demoFun");
+        })
+
+
+        const sayBy=(callback)=>{
+            console.log("Inside sayBy");
+            setTimeout(()=>{
+                callback();
+            },2000)
+            console.log("Finished anather work");
+        }
+
+        sayBy(()=>{
+            console.log("this is callback function");
+        }) 
+
+        //division 2 number
+        
+        let myDivision=(div)=>{
+            setTimeout(()=>{
+                div(2,2);
+            },2000)
+
+        }
+        function division(a,b){
+            console.log(a/b);
+        }
+
+        myDivision(division);
+
+
+//addition 2 number
+
+
+        let myAdd=(addition)=>{
+            setTimeout(()=>{
+                addition(2,2);
+            },2000)
+
+        }
+        function addition(a,b){
+            console.log(a+b);
+        }
+
+        myAdd(addition);
+
+        //find sum
+
+        let findSum=(callback)=>{
+            const data="Aachal Inside The House";
+            setTimeout(()=>{
+                callback(data);
+            },3000)
+
+        }
+        findSum((n)=>{
+            console.log(`this is my callback function ${n}`)
+        })
+
+        //fetchdata
+
+        function fetchData(callback){
+            setTimeout(()=>{
+                const data="recived data";
+                callback(data);
+            },3000)
+        }
+        
+
+        //promise: it is and object that represnt evantual data in the form of success or faluare of asynchornous operation,
+        //it is using then, catch and finally operator.
+
+
+
+        let fetchData= new Promise((resolve, reject)=>{
+            setTimeout(()=>{
+                const data='recived data from promises';
+                resolve(data);
+            },3000)
+        })
+        fetchData.then((data)=>{
+            console.log("using resolve"+data);
+
+        }).catch((error)=>{
+            console.log("error in fetch data");
+        })
+
+
+
+        
+        let fetchData1= new Promise((resolve, reject)=>{
+            setTimeout(()=>{
+               
+                reject("error");
+            },3000)
+        })
+
+        fetchData1.then((data)=>{
+            console.log(data);
+
+        }).catch((error)=>{
+            console.log("error in fetching data");
+        })
+*/
+
+
+            function checkNumber(number){
+
+                return new Promise((resolve,reject)=>{
+                    if(number>10)
+                        resolve('the number is greter than 10');
+                    else
+                    reject('the number is less than 10');
+
+                    
+                })
+
+
+            }
+
+          checkNumber(15).then((msg)=>{
+            console.log(msg)
+          }).catch((error)=>{
+            console.log(error);
+          });
+
+
+
+            checkNumber(5).then((msg)=>{
+                console.log(msg)
+            }).catch((error)=>{
+                console.log(error);
+            })
+
+
+
+
+
+        </script>
+    
+</body>
+</html>

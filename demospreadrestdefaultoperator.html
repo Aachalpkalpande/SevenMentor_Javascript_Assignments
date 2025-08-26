@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo Spread rest default</title>
+</head>
+<body>
+    <script>
+    /*Spread operator: It denotes using   ...
+    it used to expand or spread out elements of an array or object.
+    It can be used in various context like copying arrays or object,
+    mering them or passing them as function argument. */
+
+        a1=[12,13,14,15];
+
+        a2=[...a1];  //copy
+
+        console.log(a2);
+
+
+        a3=[100,200,300,400,...a2];//merging
+//fetch the index
+        for(let i in a3)
+        {
+            console.log(a3[i]);
+        }
+
+        a4=[...a1,...a3];
+
+console.log("Merging two array")
+//fetch element
+        for(let e of a4)
+        {
+            console.log(e);
+        }
+        //for each loop
+
+
+
+
+        //json object
+
+     let ob1=   {
+                id:1,
+                name:"ajay",
+                marks:80
+        }
+
+        let ob2={...ob1}
+
+        console.log(ob2)
+
+
+        let ob3={...ob1,age:22}
+        console.log(ob3);
+
+        //Rest parameter( ... ) :It is used with function to hold many values.
+
+        //WAP to sum 5 numbers
+
+        function sum(...a)
+        { let s=0;
+
+            for(let e of a)
+            {
+                 s=s+e;
+            }
+            console.log("sum is"+s);
+        }
+
+        sum(2,3,4,6,7);
+        console.log("second call")
+        sum(2,3,4)
+
+
+        //reduce: 
+     
+      
+
+        function add(...num)
+        {
+           return  num.reduce((previous,current)=>p+c,0)
+        }
+
+      let s=  add(2,3,4);
+      console.log(s);
+
+
+      function mul(...num)
+        {
+           return  num.reduce((previous,current)=>p*c,1)
+        }
+
+      let m=  mul(2,3,4);
+      console.log(m);
+
+
+        //destructing of an array:
+
+        let myArray=[6,4,5,4,3,2];
+
+
+        [n1,n2,...m]=myArray
+
+
+        console.log("Destructing of array");
+        console.log(n1);
+        console.log(n2);
+        console.log(m)
+
+
+        //destructing object
+
+        let myObject={
+            id:1,
+            name:"ajya",
+            age:20
+        }
+
+
+     const   {id,...lm}=myObject;
+       
+  
+     console.log("destructing of object")
+        console.log(id);
+        console.log(lm);
+
+        //default argument
+        function myFun(x, y=6)
+    {
+        console.log(x+y);
+    }
+    myFun(3);
+    myFun(7,5);
+
+
+    // calculating si
+    function findSI(p,n,r=5)
+    {
+        return(p*n*r)/100;
+    }
+
+    console.log(findSI(10000,2));
+    console.log(findSI(20000,2,3));
+
+    
+
+    </script>
+</body>
+</html>

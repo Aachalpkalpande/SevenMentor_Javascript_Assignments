@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom Action Listerner</title>
+</head>
+<body>
+         <button id="myId">Click Me</button>
+
+         <script>
+      const b=      document.getElementById("myId");
+
+      b.addEventListener('click',function(){
+         
+            alert("Button click successfully");
+      })
+         </script>
+
+    
+<button id="btn">click me Query</button>
+
+<script>
+    const b1=document.querySelector('#btn');
+    b1.addEventListener('click',function(){
+            alert("button clicked");
+    })
+
+
+  
+</script>
+</body>
+</html>
